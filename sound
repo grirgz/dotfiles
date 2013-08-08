@@ -1,0 +1,5 @@
+#!/bin/sh
+#jack_control start && sleep 8 && (pulseaudio & (sleep 8 && ~/bin/pjack))
+#pulseaudio -k && jack_control start
+#pulseaudio -k ; jack_control start && sleep 1 && pulseaudio
+jack_control start

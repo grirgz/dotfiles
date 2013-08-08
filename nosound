@@ -1,0 +1,4 @@
+#!/bin/sh
+#jack_control start && sleep 8 && (pulseaudio & (sleep 8 && ~/bin/pjack))
+#jack_control stop && sleep 1 && nohup pulseaudio &
+jack_control stop
