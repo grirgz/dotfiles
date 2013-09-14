@@ -1,0 +1,2 @@
+add launchpad_connect
+make lib/main.scd a relative path
