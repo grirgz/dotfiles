@@ -15,5 +15,7 @@ o.numOutputBusChannels = 8 + 1 * 2;
 		MIDIClient.init; 
 		"~/bin/launchpad_connect".standardizePath.unixCmd;
 		"jack_connect A-PRO:midi/playback_2 SuperCollider:midi/capture_1".unixCmd;
+	} {
+		"Midi already initialized.";
 	};
 };

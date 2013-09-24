@@ -1,0 +1,18 @@
+#!/bin/sh
+
+CMD="git add . && git commit -a && git push"
+
+cd ~/dotfiles/
+sh -c "$CMD"
+
+cd ~/.local/share/SuperCollider/Extensions/seco
+sh -c "$CMD"
+
+cd ~/.local/share/SuperCollider/Extensions/seco/seco
+sh -c "$CMD"
+
+cd ~/code/sc/seco
+sh -c "$CMD"
+
+cd ~/.vim
+sh -c "$CMD"
