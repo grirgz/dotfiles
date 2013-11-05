@@ -2,17 +2,29 @@
 
 CMD="git add . && git commit -a && git push"
 
+echo ========================= BEGIN
+
 cd ~/dotfiles/
 sh -c "$CMD"
+
+echo =========================
 
 cd ~/.local/share/SuperCollider/Extensions/seco
 sh -c "$CMD"
 
+echo =========================
+
 cd ~/.local/share/SuperCollider/Extensions/seco/seco
 sh -c "$CMD"
+
+echo =========================
 
 cd ~/code/sc/seco
 sh -c "$CMD"
 
+echo =========================
+
 cd ~/.vim
 sh -c "$CMD"
+
+echo ========================= END
