@@ -9,6 +9,7 @@ o.memSize = 8192 * 8;
 //o.numPrivateAudioBusChannels = 512;
 o.numAudioBusChannels = 512;
 o.numOutputBusChannels = 8 + 1 * 2;
+o.numWireBufs = 64 * 4;
 
 ~initialize_jack = {
 	if(MIDIClient.initialized == false) { 
@@ -16,6 +17,17 @@ o.numOutputBusChannels = 8 + 1 * 2;
 		"~/bin/launchpad_connect".standardizePath.unixCmd;
 		"jack_connect A-PRO:midi/playback_2 SuperCollider:midi/capture_1".unixCmd;
 	} {
-		"Midi already initialized.";
+		"Midi already initialized just connect.";
+		//MIDIClient.restart;
 	};
+	~launchpad_device_id = MIDIIn.findPort ("Launchpad S-Launchpad S MIDI 1", "Launchpad S-Launchpad S MIDI 1") !? (_.uid);
+	~icon_device_id = MIDIIn.findPort ("iCON iControls V2.00-iCON iControls V2.00 MIDI 1", "iCON iControls V2.00-iCON iControls V2.00 MIDI 1") !? (_.uid);
+	~icon_device_id.debug("iCON iControls device");
+	~launchpad_device_id.debug("Launchpad device");
+	MIDIOut(0).connect( MIDIClient.destinations.detectIndex { arg x; x.device == "Launchpad S-Launchpad S MIDI 1" } );
+	MIDIOut(0).connect( MIDIClient.destinations.detectIndex { arg x; x.device == "iCON iControls V2.00-iCON iControls V2.00 MIDI 1" } );
+	MIDIIn.connect(0, ~launchpad_device_id);
+	MIDIIn.connect(0, ~icon_device_id);
 };
+
+//MIDIClient.sources
