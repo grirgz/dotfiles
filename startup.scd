@@ -11,6 +11,8 @@ o.numAudioBusChannels = 512;
 o.numOutputBusChannels = 8 + 1 * 2;
 o.numWireBufs = 64 * 4;
 
+"hello!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!".postln;
+
 ~initialize_jack = {
 	if(MIDIClient.initialized == false) { 
 		MIDIClient.init; 
