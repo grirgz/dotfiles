@@ -3,13 +3,17 @@ set nofoldenable
 highlight Folded ctermbg=none ctermfg=grey
 set undofile
 set undodir=~/.vim/undo
-set runtimepath+=~/.vim/UltiSnips-2.1/
+set runtimepath+=~/.vim/ultisnips3/
 set so=15
 
 let g:UltiSnipsExpandTrigger="<tab>"
 "let g:UltiSnipsJumpForwardTrigger="<tab>"
 "let g:UltiSnipsJumpBackwardTrigger="<S-tab>"
-let g:UltiSnipsSnippetDirectories = [ "UltiSnips-2.1/UltiSnips" ]
+let g:UltiSnipsSnippetDirectories = [ "ultisnips3/UltiSnips" ]
+let g:UltiSnipsSnippetsDir = "~/.vim/ultisnips3/UltiSnips"
+let g:UltiSnipsEditSplit = "vertical"
+
+""delcommand UltiSnipsAddFiletypes "so :UltiSnipsEdit come first
 
 imap <c-j> 
 imap <c-k> <Esc><<i
