@@ -7,7 +7,7 @@ sudo apt-get install screen git vim-gnome unison avahi-discover htop
 
 #### bashrc
 
-export PATH=$PATH:\bin
+export PATH=$PATH:~/bin
 
 #### dotfiles
 
