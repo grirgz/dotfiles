@@ -1,2 +1,2 @@
 #!/bin/sh
-ssh -p 2200 ggz@ggzor.local
+ssh -X -p 2200 ggz@ggzor.local
