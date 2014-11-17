@@ -37,3 +37,5 @@ o.numWireBufs = 64 * 4;
 };
 
 //MIDIClient.sources
+
+~cuspn_project_path = "~/code/sc/seco/vlive/cuspn".standardizePath;
