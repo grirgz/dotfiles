@@ -1,5 +1,5 @@
 # Unison preferences
-root = /home/ggz/
+root = /home/ggz
 root = ssh://ggz@ggzor.local:2200/
 sshargs = -C
 path = Musique/sc/samplekit

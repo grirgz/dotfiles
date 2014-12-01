@@ -24,7 +24,7 @@ ln -s ~/dotfiles/seco ~/bin
 ln -s ~/dotfiles/sound ~/bin
 ln -s ~/dotfiles/nosound ~/bin
 ln -s ~/dotfiles/update_repos ~/bin
-ln -s ~/dotfiles/samples.prf ~/.unison/
+ln -s ~/dotfiles/samples.prf ~/.unison/ # note: root is /home/ggz, should be changed or symlinked if different profile name
 
 #### vim
 
@@ -56,3 +56,5 @@ unison samples
 
 wslib # isSymbolWS
 jitlibextensions # Halo getSpec
+cruciallib # StaticIntegerSpec in v15 (why i use this, no reason!)
+Feedback # Fb in rise13
