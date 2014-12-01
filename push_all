@@ -1,6 +1,6 @@
 #!/bin/sh
 
-CMD="git add . && git commit -a && git push"
+CMD="git add . ; git commit -a ; git push"
 
 echo BEGIN ========================= dotfiles
 
