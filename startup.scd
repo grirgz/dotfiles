@@ -7,9 +7,12 @@ GUI.qt;
 o = Server.default.options;
 o.memSize = 8192 * 8;
 //o.numPrivateAudioBusChannels = 512;
-o.numAudioBusChannels = 512;
+o.numAudioBusChannels = 128 * 8;
+o.numControlBusChannels = 4096 * 8;
 o.numOutputBusChannels = 8 + 1 * 2;
 o.numWireBufs = 64 * 4;
+o.maxSynthDefs = 1024 * 2;
+o.numBuffers = 1024 * 2;
 
 "hello!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!".postln;
 
