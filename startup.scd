@@ -14,6 +14,8 @@ o.numWireBufs = 64 * 4;
 o.maxSynthDefs = 1024 * 2;
 o.numBuffers = 1024 * 2;
 
+SynthDescLib.global.read;
+
 "hello!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!".postln;
 
 ~initialize_jack = {
