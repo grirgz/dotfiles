@@ -2,20 +2,26 @@
 
 CMD="git pull"
 
+echo "================================== dotfiles"
 cd ~/dotfiles/
 sh -c "$CMD"
 
+echo "================================== vim"
 cd ~/.vim/
 sh -c "$CMD"
 
+echo "================================== projects"
 cd ~/code/sc/seco/
 sh -c "$CMD"
 
+echo "================================== cuspn"
 cd ~/code/sc/seco/vlive/cuspn
 sh -c "$CMD"
 
+echo "================================== classes files"
 cd ~/.local/share/SuperCollider/Extensions/seco
 sh -c "$CMD"
 
+echo "================================== seco files"
 cd ~/.local/share/SuperCollider/Extensions/seco/seco
 sh -c "$CMD"
