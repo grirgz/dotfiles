@@ -1,0 +1,29 @@
+
+//// publish changes
+git add .
+git commit -a
+git push
+
+//// create new branch and publish
+git checkout -b newbranch
+git push -u origin newbranch // -u ajoute la branche au config pour qu'un pull fonctionne directement sans argument
+
+//which is a shortcut of
+git branch newbranch
+git checkout newbranch
+
+//// list branches
+git branch
+
+//// change branch
+git checkout newbranch
+
+//// conflict: stash
+git stash // stash the changes
+
+git stash apply // reprendre les changement dans le stash et les mettre dans la branche
+git stash drop // supprimer le stash (qui reste meme apres avoir fait un apply)
+
+// ou
+git stash pop // apply changes and drop stash
+

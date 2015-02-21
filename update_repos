@@ -11,6 +11,9 @@ sh -c "$CMD"
 cd ~/code/sc/seco/
 sh -c "$CMD"
 
+cd ~/code/sc/seco/vlive/cuspn
+sh -c "$CMD"
+
 cd ~/.local/share/SuperCollider/Extensions/seco
 sh -c "$CMD"
 

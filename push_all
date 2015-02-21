@@ -22,9 +22,15 @@ echo ========================= projects
 cd ~/code/sc/seco
 sh -c "$CMD"
 
+echo ========================= cuspn
+
+cd ~/code/sc/seco/vlive/cuspn
+sh -c "$CMD"
+
 echo ========================= vim
 
 cd ~/.vim
 sh -c "$CMD"
+
 
 echo ========================= END
