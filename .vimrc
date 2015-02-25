@@ -1,3 +1,9 @@
+
+execute pathogen#infect()
+let g:startify_session_delete_buffers=1
+let g:startify_list_order = ['sessions', 'files', 'dir', 'bookmarks']
+
+
 set foldmethod=indent
 set nofoldenable
 highlight Folded ctermbg=none ctermfg=grey
