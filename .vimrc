@@ -2,6 +2,7 @@
 execute pathogen#infect()
 let g:startify_session_delete_buffers=1
 let g:startify_list_order = ['sessions', 'files', 'dir', 'bookmarks']
+let g:startify_bookmarks = [ '~/.vimrc', '~/.config/SuperCollider/startup.scd' ]
 
 
 set foldmethod=indent

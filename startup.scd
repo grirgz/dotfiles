@@ -3,7 +3,6 @@
 //SwingOSC.program = ("/usr/local/bin/SwingOSC.jar").standardizePath;
 //SwingOSC.default.boot;
 
-GUI.qt;
 o = Server.default.options;
 o.memSize = 8192 * 8;
 //o.numPrivateAudioBusChannels = 512;
