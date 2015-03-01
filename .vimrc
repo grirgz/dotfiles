@@ -1,3 +1,4 @@
+set sessionoptions-=options
 
 execute pathogen#infect()
 let g:startify_session_delete_buffers=1

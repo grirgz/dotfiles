@@ -24,3 +24,5 @@ fi
 function grepr { grep --color=always -R "$1" . | less -R; }
 
 . ~/dotfiles/bash_init.sh
+
+alias mradd='mr run git add . ; mr commit'
