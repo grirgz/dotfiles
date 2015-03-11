@@ -1,4 +1,4 @@
 #!/bin/sh
 
 cd ~/.local/share/SuperCollider/Extensions/seco/seco
-screen scvim -- -S ~/.vim/session/scvim
+screen scvim 
