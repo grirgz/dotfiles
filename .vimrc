@@ -36,3 +36,5 @@ filetype indent on
 
 au BufRead,BufNewFile *.sc 	set filetype=supercollider
 au BufRead,BufNewFile *.scd 	set filetype=supercollider
+
+command CD cd %:p:h
