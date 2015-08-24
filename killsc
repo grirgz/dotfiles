@@ -1,0 +1,5 @@
+#!/bin/sh
+
+pkill -f sclangpipe
+pkill -f sclang-pipe
+rm /tmp/sclangpipe_app-pid
