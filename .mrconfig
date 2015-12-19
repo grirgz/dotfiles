@@ -21,4 +21,4 @@ checkout = git clone 'https://github.com/grirgz/seco' 'seco'
 checkout = git clone 'https://github.com/grirgz/param.git' 'param'
 
 [code/sc/seco/vlive/cuspn]
-checkout = git clone 'git@github.com:grirgz/cuspn.git' 'cuspn'
+checkout = git clone 'https://github.com/grirgz/cuspn.git' 'cuspn'
