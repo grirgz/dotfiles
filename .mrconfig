@@ -22,3 +22,9 @@ checkout = git clone 'https://github.com/grirgz/param.git' 'param'
 
 [code/sc/seco/vlive/cuspn]
 checkout = git clone 'https://github.com/grirgz/cuspn.git' 'cuspn'
+
+[.vim/bundle/nerdtree]
+checkout = git clone 'https://github.com/scrooloose/nerdtree.git' 'nerdtree'
+
+[.vim/bundle/vim-startify]
+checkout = git clone 'https://github.com/vim-scripts/vim-startify' 'vim-startify'
