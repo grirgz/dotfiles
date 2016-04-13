@@ -1,4 +1,7 @@
 
+[.local/share/SuperCollider/Extensions/RandGraph]
+checkout = git clone 'https://github.com/grirgz/RandGraph' 'RandGraph'
+
 [dotfiles]
 checkout = git clone 'https://github.com/grirgz/dotfiles' 'dotfiles'
 
