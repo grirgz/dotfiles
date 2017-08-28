@@ -21,8 +21,10 @@ if [ -x /usr/bin/dircolors ]; then
     alias fgrep='fgrep --color=auto'
     alias egrep='egrep --color=auto'
 fi
-function grepr { grep --color=always -R "$1" . | less -R; }
+function grepr { grep --color=always -R "$1" . | less -R -F; }
 
 . ~/dotfiles/bash_init.sh
 
 alias mradd='mr run git add . ; mr commit'
+
+alias killfox='pkill firefox && sleep 2 && firefox &'

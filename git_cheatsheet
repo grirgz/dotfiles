@@ -27,3 +27,8 @@ git stash drop // supprimer le stash (qui reste meme apres avoir fait un apply)
 // ou
 git stash pop // apply changes and drop stash
 
+
+// diff
+git diff // difference entre le stage et le dernier commit de la branche
+git diff HEAD . // difference entre le repertoire courant et le dernier commit (HEAD)
+git difftool HEAD . // utilise un outil graphique pour faire le diff
