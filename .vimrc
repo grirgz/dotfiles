@@ -1,5 +1,7 @@
 set sessionoptions-=options
 
+let mapleader = "_"
+
 execute pathogen#infect()
 let g:startify_session_delete_buffers=1
 let g:startify_list_order = ['sessions', 'files', 'dir', 'bookmarks']
