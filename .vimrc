@@ -40,3 +40,6 @@ au BufRead,BufNewFile *.sc 	set filetype=supercollider
 au BufRead,BufNewFile *.scd 	set filetype=supercollider
 
 command CD cd %:p:h
+
+
+set updatecount=20000 " write swap file on disk less often to make pasting faster
