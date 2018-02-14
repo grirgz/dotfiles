@@ -1,6 +1,8 @@
 sudo apt-get install build-essential vim-gnome screen htop cmake-curses-gui
 sudo apt-get install jackd2
 
+sudo apt-get -y install irssi
+
 # Supercollider
 
 sudo apt-get install pulseaudio-module-jack && pkill pulseaudio

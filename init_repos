@@ -1,30 +1,4 @@
-#!/bin/sh
-
-#### packages
-
-sudo apt-get install screen git vim-gnome unison avahi-discover htop
-# vim-gnome for vim server feature
-
-#### bashrc
-
-export PATH=$PATH:~/bin
-
-#### dotfiles
-
-cd ~
-git clone https://github.com/grirgz/dotfiles.git
-
-ln -s ~/dotfiles/.vimrc ~/.vimrc
-
-mkdir ~/.config/SuperCollider
-ln -s ~/dotfiles/startup.scd ~/.config/SuperCollider/startup.scd
-
-mkdir ~/bin
-ln -s ~/dotfiles/seco ~/bin
-ln -s ~/dotfiles/sound ~/bin
-ln -s ~/dotfiles/nosound ~/bin
-ln -s ~/dotfiles/update_repos ~/bin
-ln -s ~/dotfiles/samples.prf ~/.unison/ # note: root is /home/ggz, should be changed or symlinked if different profile name
+## deprecated, use mr update in home
 
 #### vim
 
@@ -34,16 +8,20 @@ git clone https://github.com/grirgz/vimrc.git ~/.vim
 #### projects
 
 mkdir -p ~/code/sc/
-git clone https://github.com/grirgz/seco_live.git seco
+git clone https://github.com/grirgz/seco_live.git ~/code/sc/seco
 
 #### cuspn
 
 cd $live
 git clone https://github.com/grirgz/cuspn.git cuspn
 
+### SCVim
+# since 3.9, SCVim is separated
+git clone https://github.com/supercollider/scvim.git ~/.vim/scvim
+
 #### Extensions
 
-mkdir ~/.local/share/SuperCollider/Extensions
+mkdir -p ~/.local/share/SuperCollider/Extensions
 cd ~/.local/share/SuperCollider/Extensions
 git clone https://github.com/grirgz/extensions.git seco
 
@@ -52,14 +30,3 @@ git clone https://github.com/grirgz/extensions.git seco
 cd ~/.local/share/SuperCollider/Extensions/seco
 git clone https://github.com/grirgz/seco.git seco
 
-#### samples
-
-mkdir -p ~/Musique/sc/samplekit
-unison samples
-
-#### quarks
-
-wslib # isSymbolWS
-jitlibextensions # Halo getSpec
-cruciallib # StaticIntegerSpec in v15 (why i use this, no reason!)
-Feedback # Fb in rise13

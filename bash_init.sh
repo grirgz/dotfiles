@@ -1,4 +1,6 @@
 
+export PATH=$PATH:~/bin
+
 seco=~/.local/share/SuperCollider/Extensions/seco/seco
 Seco=~/.local/share/SuperCollider/Extensions/seco/
 live=~/code/sc/seco/vlive
