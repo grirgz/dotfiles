@@ -1,0 +1,19 @@
+RDN ~/.local/share/SuperCollider/Extensions/RandGraph/RandDelayNetwork.sc
+SCClassLib /usr/local/share/SuperCollider/SCClassLibrary
+catalog ~/code/sc/seco/vlive/catalog
+crap ~/code/sc/seco/vlive/crap
+demo ~/code/sc/seco/vlive/demo
+downloaded-quarks ~/.local/share/SuperCollider/downloaded-quarks
+explore ~/code/sc/seco/vlive/explore
+extensions ~/.local/share/SuperCollider/Extensions
+hey ~/.local/share/SuperCollider/Extensions/seco/seco/vecolib
+param ~/.local/share/SuperCollider/Extensions/param
+param_demo ~/code/sc/seco/vlive/demo/param
+param_draft ~/code/sc/seco/vlive/lib/demo/param.scd
+param_proto ~/.local/share/SuperCollider/Extensions/param/Proto
+paramc ~/.local/share/SuperCollider/Extensions/param/Classes/Param.sc
+proto ~/.local/share/SuperCollider/Extensions/param/Proto
+repeat ~/code/sc/seco/vlive/repeat
+veco ~/.local/share/SuperCollider/Extensions/seco/seco/veco
+vlive ~/code/sc/seco/vlive
+
