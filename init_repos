@@ -15,9 +15,6 @@ git clone https://github.com/grirgz/seco_live.git ~/code/sc/seco
 cd $live
 git clone https://github.com/grirgz/cuspn.git cuspn
 
-### SCVim
-# since 3.9, SCVim is separated
-git clone https://github.com/supercollider/scvim.git ~/.vim/scvim
 
 #### Extensions
 

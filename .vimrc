@@ -38,6 +38,7 @@ filetype indent on
 
 au BufRead,BufNewFile *.sc 	set filetype=supercollider
 au BufRead,BufNewFile *.scd 	set filetype=supercollider
+source ~/.vim/sc.vim " added because dont know what replace .scvimrc in 3.9.1
 
 command CD cd %:p:h
 

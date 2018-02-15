@@ -22,14 +22,13 @@ mkdir ~/bin
 ln -s ~/dotfiles/seco ~/bin
 ln -s ~/dotfiles/sound ~/bin
 ln -s ~/dotfiles/nosound ~/bin
-ln -s ~/dotfiles/update_repos ~/bin
 mkdir ~/.unison/
 ln -s ~/dotfiles/samples.prf ~/.unison/ # note: root is /home/ggz, should be changed or symlinked if different profile name
 
 ### create all repo
 
 cd ~
-mr update
+mr checkout
 
 ### Build SC
 
@@ -46,7 +45,10 @@ ccmake ..
 make -j 4
 sudo make install
 
-# since 3.9, SCVim is separated in ~/.vim/scvim repo
+### SCVim
+# since 3.9, SCVim is separated
+# not in mr yet to not pollute older sc versions
+git clone https://github.com/supercollider/scvim.git ~/.vim/bundle/scvim
 
 
 #### samples
