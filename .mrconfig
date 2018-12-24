@@ -23,8 +23,6 @@ checkout = git clone 'https://github.com/grirgz/seco' 'seco'
 [.local/share/SuperCollider/Extensions/param]
 checkout = git clone 'https://github.com/grirgz/param.git' 'param'
 
-[code/sc/seco/vlive/cuspn]
-checkout = git clone 'https://github.com/grirgz/cuspn.git' 'cuspn'
 
 [.vim/bundle/nerdtree]
 checkout = git clone 'https://github.com/scrooloose/nerdtree.git' 'nerdtree'

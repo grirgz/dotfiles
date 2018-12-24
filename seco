@@ -1,4 +1,5 @@
 #!/bin/sh
 
-cd ~/.local/share/SuperCollider/Extensions/seco/seco
-screen scvim 
+#cd ~/.local/share/SuperCollider/Extensions/seco/seco
+#screen scvim
+tmux new-session "vim --servername scvim -c 'set ft=supercollider | SClangStart'"

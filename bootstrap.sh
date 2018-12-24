@@ -25,10 +25,15 @@ ln -s ~/dotfiles/nosound ~/bin
 mkdir ~/.unison/
 ln -s ~/dotfiles/samples.prf ~/.unison/ # note: root is /home/ggz, should be changed or symlinked if different profile name
 
+ln -s ~/dotfiles/.NERDTreeBookmarks ~/
+
 ### create all repo
 
 cd ~
 mr checkout
+
+### sync local repo
+git clone ssh://ggz@ggzor.local:2200/home/ggz/Notebooks/Notes
 
 ### Build SC
 
@@ -45,6 +50,18 @@ ccmake ..
 make -j 4
 sudo make install
 
+# plugins
+
+# 3.7.1
+#since downloading the tarball miss the nova submodule, i clone the git repo then checkout the Version-3.7.1 tag
+
+git clone https://github.com/supercollider/sc3-plugins
+git submodule update --init # nove submodule
+git tag -l # to list tags
+git checkout Version-3.9.1
+
+# note: Tscramble UGen come from wslib quark
+
 ### SCVim
 # since 3.9, SCVim is separated
 # not in mr yet to not pollute older sc versions
@@ -58,7 +75,13 @@ unison samples
 
 #### quarks
 
-wslib # isSymbolWS
-jitlibextensions # Halo getSpec
+ddwCommon # asPattern used by streamPlayer of Param quark
+wslib # isSymbolWS, Tscramble UGen
 cruciallib # StaticIntegerSpec in v15 (why i use this, no reason!)
 Feedback # Fb in rise13
+Modality
+
+# used by Param
+Log
+jitlibextensions # Halo getSpec
+

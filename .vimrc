@@ -1,5 +1,8 @@
 set sessionoptions-=options
 
+set ts=4
+set sw=4
+
 let mapleader = "_"
 
 execute pathogen#infect()
@@ -44,3 +47,34 @@ command CD cd %:p:h
 
 
 set updatecount=20000 " write swap file on disk less often to make pasting faster
+
+
+" vim-indentwise"
+"map [- <Plug>(IndentWisePreviousLesserIndent)
+"map [= <Plug>(IndentWisePreviousEqualIndent)
+"map [+ <Plug>(IndentWisePreviousGreaterIndent)
+"map ]- <Plug>(IndentWiseNextLesserIndent)
+"map ]= <Plug>(IndentWiseNextEqualIndent)
+"map ]+ <Plug>(IndentWiseNextGreaterIndent)
+"map [_ <Plug>(IndentWisePreviousAbsoluteIndent)
+"map ]_ <Plug>(IndentWiseNextAbsoluteIndent)
+"map [% <Plug>(IndentWiseBlockScopeBoundaryBegin)
+"map ]% <Plug>(IndentWiseBlockScopeBoundaryEnd)"
+
+"map (h <Plug>(IndentWisePreviousLesserIndent)
+"map (j <Plug>(IndentWisePreviousEqualIndent)
+"map (l <Plug>(IndentWisePreviousGreaterIndent)
+"map )h <Plug>(IndentWiseNextLesserIndent)
+"map )j <Plug>(IndentWiseNextEqualIndent)
+"map )l <Plug>(IndentWiseNextGreaterIndent)
+"map (k <Plug>(IndentWiseBlockScopeBoundaryBegin)
+"map )k <Plug>(IndentWiseBlockScopeBoundaryEnd)"
+
+map -hk <Plug>(IndentWisePreviousLesserIndent)
+map -k <Plug>(IndentWisePreviousEqualIndent)
+map -lk <Plug>(IndentWisePreviousGreaterIndent)
+map -hj <Plug>(IndentWiseNextLesserIndent)
+map -j <Plug>(IndentWiseNextEqualIndent)
+map -lj <Plug>(IndentWiseNextGreaterIndent)
+map -hh <Plug>(IndentWiseBlockScopeBoundaryBegin)
+map -ll <Plug>(IndentWiseBlockScopeBoundaryEnd)"

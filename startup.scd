@@ -30,57 +30,31 @@ SynthDescLib.global.read;
 
 "hello!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!".postln;
 
+~connect_jack_device = { arg idsymbol;
+	"==== %: Device id = %".format(idsymbol, topEnvironment[idsymbol]).debug;
+	if(topEnvironment[idsymbol].notNil) {
+		try {
+			MIDIOut.connect(0, topEnvironment[idsymbol]);
+		} {
+			"%: Probably already connected out".format(idsymbol).debug;
+		};
+		try {
+			MIDIIn.connect(0, topEnvironment[idsymbol]);
+		} {
+			"%: Probably already connected in".format(idsymbol).debug;
+		};
+	} {
+		"%: Device id is nil".format(idsymbol).debug;
+	};
+};
+
 ~connect_jack = {
 	~launchpad_device_id = MIDIIn.findPort ("Launchpad S", "Launchpad S MIDI 1") !? (_.uid);
 	~icon_device_id = MIDIIn.findPort ("iCON iControls V2.00", "iCON iControls V2.00 MIDI 1") !? (_.uid);
 	~apro_device_id = MIDIIn.findPort ("A-PRO", "A-PRO MIDI 2") !? (_.uid);
-	~icon_device_id.debug("iCON iControls device");
-	~launchpad_device_id.debug("Launchpad device");
+	~apc_device_id = MIDIIn.findPort ("APC40 mkII", "APC40 mkII MIDI 1") !? (_.uid);
 
-	if(~launchpad_device_id.notNil) {
-		try {
-			MIDIOut.connect(0, ~launchpad_device_id);
-		} {
-			"Lauchpad probably already connected out".debug;
-		};
-		try {
-			MIDIIn.connect(0, ~launchpad_device_id);
-		} {
-			"Lauchpad probably already connected in".debug;
-		};
-	} {
-		"Launchpad device id is nil".debug;
-	};
-
-	if(~icon_device_id.notNil) {
-		try {
-			MIDIOut.connect(0, ~icon_device_id);
-		} {
-			"Icon probably already connected out".debug;
-		};
-		try {
-			MIDIIn.connect(0, ~icon_device_id);
-		} {
-			"Icon probably already connected in".debug;
-		}
-	} {
-		"Icon device id is nil".debug;
-	};
-
-	if(~apro_device_id.notNil) {
-		try {
-			MIDIOut.connect(0, ~apro_device_id);
-		} {
-			"APRO probably already connected out".debug;
-		};
-		try {
-			MIDIIn.connect(0, ~apro_device_id);
-		} {
-			"APRO probably already connected in".debug;
-		}
-	} {
-		"APRO device id is nil".debug;
-	};
+	[\launchpad_device_id, \icon_device_id, \apro_device_id, \apc_device_id].do(~connect_jack_device);
 };
 
 
@@ -111,3 +85,10 @@ SynthDescLib.global.read;
 //MIDIClient.sources
 
 ~cuspn_project_path = "~/code/sc/seco/vlive/cuspn".standardizePath;
+
+
+// isRest legacy support
+{
+	var d = Event.parentEvents.default;
+	d[\play] = d[\play] <> { ~isRest.notNil.if { ~isRest.if { ~type = \rest } } };
+}.value;
