@@ -57,6 +57,12 @@ SynthDescLib.global.read;
 	[\launchpad_device_id, \icon_device_id, \apro_device_id, \apc_device_id].do(~connect_jack_device);
 };
 
+~restart_jack = {
+
+	MIDIClient.destinations.debug;
+	MIDIClient.restart;// does nothing
+	MIDIClient.disposeClient; // does nothing
+};
 
 ~initialize_jack = {
 	if(MIDIClient.initialized == false) { 

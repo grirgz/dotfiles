@@ -32,6 +32,14 @@ let g:UltiSnipsEditSplit = "vertical"
 
 ""delcommand UltiSnipsAddFiletypes "so :UltiSnipsEdit come first
 
+" Uncomment the following to have Vim jump to the last position when                                                       
+" reopening a file
+if has("autocmd")
+  au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
+    \| exe "normal! g'\"" | endif
+endif
+
+
 imap <c-j> 
 imap <c-k> <Esc><<i
 imap <c-l> <Esc>>>i
@@ -43,7 +51,7 @@ au BufRead,BufNewFile *.sc 	set filetype=supercollider
 au BufRead,BufNewFile *.scd 	set filetype=supercollider
 source ~/.vim/sc.vim " added because dont know what replace .scvimrc in 3.9.1
 
-command CD cd %:p:h
+command! CD cd %:p:h
 
 
 set updatecount=20000 " write swap file on disk less often to make pasting faster
