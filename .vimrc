@@ -21,7 +21,7 @@ highlight Folded ctermbg=none ctermfg=grey
 set undofile
 set undodir=~/.vim/undo
 set runtimepath+=~/.vim/ultisnips3/
-set so=15
+set scrolloff=15
 
 let g:UltiSnipsExpandTrigger="<tab>"
 "let g:UltiSnipsJumpForwardTrigger="<tab>"
@@ -29,6 +29,24 @@ let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsSnippetDirectories = [ "ultisnips3/UltiSnips" ]
 let g:UltiSnipsSnippetsDir = "~/.vim/ultisnips3/UltiSnips"
 let g:UltiSnipsEditSplit = "vertical"
+
+"""" now W and B jump to words ignoring punctuation, wonderful!!!
+function! MoveToWord(forward)
+	call search('\<', 'W'.a:forward)
+endfunction
+function! VisualMoveToWord(forward)
+	normal gv
+	call MoveToWord(a:forward)
+endfunction
+
+nnoremap W :call MoveToWord('')<cr>
+nnoremap B :call MoveToWord('b')<cr>
+vnoremap W :<C-u>call VisualMoveToWord('')<cr>
+vnoremap B :<C-u>call VisualMoveToWord('b')<cr>
+
+""" Sideway
+nnoremap <c-h> :SidewaysLeft<cr>
+nnoremap <c-l> :SidewaysRight<cr>
 
 ""delcommand UltiSnipsAddFiletypes "so :UltiSnipsEdit come first
 
