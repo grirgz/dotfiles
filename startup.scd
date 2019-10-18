@@ -53,8 +53,9 @@ SynthDescLib.global.read;
 	~icon_device_id = MIDIIn.findPort ("iCON iControls V2.00", "iCON iControls V2.00 MIDI 1") !? (_.uid);
 	~apro_device_id = MIDIIn.findPort ("A-PRO", "A-PRO MIDI 2") !? (_.uid);
 	~apc_device_id = MIDIIn.findPort ("APC40 mkII", "APC40 mkII MIDI 1") !? (_.uid);
+	~nektar_device_id = MIDIIn.findPort ("SE25", "SE25 MIDI 1") !? (_.uid);
 
-	[\launchpad_device_id, \icon_device_id, \apro_device_id, \apc_device_id].do(~connect_jack_device);
+	[\launchpad_device_id, \icon_device_id, \apro_device_id, \apc_device_id, \nektar_device_id].do(~connect_jack_device);
 };
 
 ~restart_jack = {

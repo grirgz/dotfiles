@@ -10,3 +10,6 @@ sudo apt-get install ssh open-sshd
 sudo apt-get install myrepos
 
 sudo apt-get install build-essential libjack-jackd2-dev libsndfile1-dev libasound2-dev libavahi-client-dev libicu-dev libreadline6-dev libfftw3-dev libxt-dev libudev-dev libcwiid-dev pkg-config git cmake qt5-default qt5-qmake qttools5-dev qttools5-dev-tools qtdeclarative5-dev libqt5webkit5-dev qtpositioning5-dev libqt5sensors5-dev
+
+
+sudo apt-get install xsel # for SC to write in clipboard

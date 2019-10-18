@@ -7,7 +7,7 @@
 
 #### packages
 
-sh ~/dotfiles/system_init.sh
+sh ~/dotfiles/install_base_packages.sh
 
 #### dotfiles
 
