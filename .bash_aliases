@@ -22,6 +22,7 @@ if [ -x /usr/bin/dircolors ]; then
     alias egrep='egrep --color=auto'
 fi
 function grepr { grep --color=always -R "$1" . | less -R -F; }
+function ksl { unbuffer apt search $@ | less -R; }
 
 . ~/dotfiles/bash_init.sh
 
