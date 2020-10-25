@@ -18,6 +18,7 @@ let g:startify_bookmarks = [
 set foldmethod=indent
 set nofoldenable
 highlight Folded ctermbg=none ctermfg=grey
+highlight Comment ctermbg=none ctermfg=lightblue
 set undofile
 set undodir=~/.vim/undo
 set runtimepath+=~/.vim/ultisnips3/
