@@ -11,6 +11,7 @@ alias jd='jack_control status'
 alias jl='~/bin/jack_startup'
 alias jp='pulseaudio'
 alias jpk='pulseaudio -k'
+alias df='df -h'
 if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
     alias ls='ls --color=auto'

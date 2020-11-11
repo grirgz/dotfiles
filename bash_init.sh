@@ -8,3 +8,5 @@ cuspn=~/code/sc/seco/vlive/cuspn
 quarks=~/.local/share/SuperCollider/Extensions/
 
 export seco Seco live cuspn quarks
+
+eval $(thefuck --alias)
