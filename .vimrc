@@ -23,6 +23,7 @@ set undofile
 set undodir=~/.vim/undo
 set runtimepath+=~/.vim/ultisnips3/
 set scrolloff=15
+set diffopt+=vertical
 
 let g:UltiSnipsExpandTrigger="<tab>"
 "let g:UltiSnipsJumpForwardTrigger="<tab>"
