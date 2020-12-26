@@ -4,7 +4,6 @@ demo ~/code/sc/seco/vlive/demo
 downloaded-quarks ~/.local/share/SuperCollider/downloaded-quarks
 explore ~/code/sc/seco/vlive/explore
 extensions ~/.local/share/SuperCollider/Extensions
-hey ~/.local/share/SuperCollider/Extensions/seco/seco/vecolib
 param ~/.local/share/SuperCollider/Extensions/param
 param_demo ~/code/sc/seco/vlive/demo/param
 param_draft ~/code/sc/seco/vlive/lib/demo/param.scd
@@ -14,6 +13,7 @@ proto ~/.local/share/SuperCollider/Extensions/param/Proto
 RDN ~/.local/share/SuperCollider/Extensions/RandGraph/RandDelayNetwork.sc
 repeat ~/code/sc/seco/vlive/repeat
 SCClassLib /usr/local/share/SuperCollider/SCClassLibrary
-veco ~/.local/share/SuperCollider/Extensions/seco/seco/veco
 vlive ~/code/sc/seco/vlive
 
+hey ~/.local/share/SuperCollider/Extensions/seco/seco/vecolib
+veco ~/.local/share/SuperCollider/Extensions/seco/seco/veco

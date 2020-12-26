@@ -47,8 +47,8 @@ vnoremap W :<C-u>call VisualMoveToWord('')<cr>
 vnoremap B :<C-u>call VisualMoveToWord('b')<cr>
 
 """ Sideway
-nnoremap <c-h> :SidewaysLeft<cr>
-nnoremap <c-l> :SidewaysRight<cr>
+nnoremap <c-m-h> :SidewaysLeft<cr>
+nnoremap <c-m-l> :SidewaysRight<cr>
 
 ""delcommand UltiSnipsAddFiletypes "so :UltiSnipsEdit come first
 

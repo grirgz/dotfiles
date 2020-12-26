@@ -7,8 +7,11 @@
 Archive.read;
 Archive.write;
 
+FileSystemProject.addPath("~/code/sc/seco/vlive/"); // order is important
 FileSystemProject.addPath("~/code/sc/seco/vlive/repeat/");
-FileSystemProject.addPath("~/code/sc/seco/vlive/");
+BufDef.addPath("~/Musique/sc/");
+WavetableDef.addPath("~/Musique/sc/samplekit/");
+FileSystemProject.recordFolder = "~/Musique/sc/cliprec/".standardizePath;
 
 //Param.defaultUpdateMode = \skipjack;
 Param.defaultUpdateMode = \dependants;
@@ -28,7 +31,7 @@ o.numBuffers = 1024 * 8;
 
 SynthDescLib.global.read;
 
-"hello!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!".postln;
+//"hello!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!".postln;
 
 ~connect_jack_device = { arg idsymbol;
 	"==== %: Device id = %".format(idsymbol, topEnvironment[idsymbol]).debug;
@@ -60,19 +63,21 @@ SynthDescLib.global.read;
 
 ~restart_jack = {
 
-	MIDIClient.destinations.debug;
-	MIDIClient.restart;// does nothing
-	MIDIClient.disposeClient; // does nothing
+	MIDIClient.list; // yes!!! stupid name for a refresh
+	//MIDIClient.destinations.debug;
+	//MIDIClient.restart;// does nothing
+	//MIDIClient.disposeClient; // does nothing
 };
 
 ~initialize_jack = {
 	if(MIDIClient.initialized == false) { 
 		MIDIClient.init; 
-		"~/bin/launchpad_connect".standardizePath.unixCmd;
-		"jack_connect A-PRO:midi/playback_2 SuperCollider:midi/capture_1".unixCmd;
+		//"~/bin/launchpad_connect".standardizePath.unixCmd;
+		//"jack_connect A-PRO:midi/playback_2 SuperCollider:midi/capture_1".unixCmd;
 	} {
-		"Midi already initialized just connect.";
+		"Midi already initialized, just connect.";
 		//MIDIClient.restart;
+		MIDIClient.list; // yes!!! stupid name for a refresh
 	};
 
 	~connect_jack.();
@@ -99,3 +104,10 @@ SynthDescLib.global.read;
 	var d = Event.parentEvents.default;
 	d[\play] = d[\play] <> { ~isRest.notNil.if { ~isRest.if { ~type = \rest } } };
 }.value;
+
+
+
+
+/////////////////////////////// boot !
+
+s.boot
