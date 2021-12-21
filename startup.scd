@@ -10,6 +10,7 @@ Archive.write;
 FileSystemProject.addPath("~/code/sc/seco/vlive/"); // order is important
 FileSystemProject.addPath("~/code/sc/seco/vlive/repeat/");
 BufDef.addPath("~/Musique/sc/");
+BufDef.addPath("~/Musique/sc/reckit");
 WavetableDef.addPath("~/Musique/sc/samplekit/");
 FileSystemProject.recordFolder = "~/Musique/sc/cliprec/".standardizePath;
 
@@ -67,6 +68,16 @@ SynthDescLib.global.read;
 	//MIDIClient.destinations.debug;
 	//MIDIClient.restart;// does nothing
 	//MIDIClient.disposeClient; // does nothing
+};
+
+~jack_connect_system_in = {
+	"jack_connect \"PulseAudio JACK Sink:front-left\" SuperCollider:in_1".unixCmd;
+	"jack_connect \"PulseAudio JACK Sink:front-right\" SuperCollider:in_2".unixCmd;
+};
+
+~jack_disconnect_system_in = {
+	"jack_disconnect \"PulseAudio JACK Sink:front-left\" SuperCollider:in_1".unixCmd;
+	"jack_disconnect \"PulseAudio JACK Sink:front-right\" SuperCollider:in_2".unixCmd;
 };
 
 ~initialize_jack = {
