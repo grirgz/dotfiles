@@ -105,4 +105,11 @@ map -hj <Plug>(IndentWiseNextLesserIndent)
 map -j <Plug>(IndentWiseNextEqualIndent)
 map -lj <Plug>(IndentWiseNextGreaterIndent)
 map -hh <Plug>(IndentWiseBlockScopeBoundaryBegin)
-map -ll <Plug>(IndentWiseBlockScopeBoundaryEnd)"
+map -ll <Plug>(IndentWiseBlockScopeBoundaryEnd)
+map ( <Plug>(IndentWisePreviousEqualIndent)
+map ) <Plug>(IndentWiseNextEqualIndent)
+
+
+"" textobj-argument
+
+let g:vim_textobj_parameter_mapping = 'a'
