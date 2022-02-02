@@ -46,6 +46,17 @@ nnoremap B :call MoveToWord('b')<cr>
 vnoremap W :<C-u>call VisualMoveToWord('')<cr>
 vnoremap B :<C-u>call VisualMoveToWord('b')<cr>
 
+
+""" Switch to last-active tab
+if !exists('g:Lasttab')
+    let g:Lasttab = 1
+    let g:Lasttab_backup = 1
+endif
+autocmd! TabLeave * let g:Lasttab_backup = g:Lasttab | let g:Lasttab = tabpagenr()
+autocmd! TabClosed * let g:Lasttab = g:Lasttab_backup
+nmap <silent> <Leader>t :exe "tabn " . g:Lasttab<cr>
+
+
 """ Sideway
 nnoremap <c-m-h> :SidewaysLeft<cr>
 nnoremap <c-m-l> :SidewaysRight<cr>
