@@ -3,3 +3,5 @@
 #pulseaudio -k && jack_control start
 #pulseaudio -k ; jack_control start && sleep 1 && pulseaudio
 jack_control start
+
+pacmd set-default-sink "jack_out"
